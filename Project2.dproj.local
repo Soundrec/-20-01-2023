@@ -1,24 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.586,C:\Users\futyn\Desktop\курсовая\Unit1.pas=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.695,C:\Users\futyn\Desktop\курсовая\Project2.dproj=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.846,=C:\Users\futyn\Desktop\курсовая\Unit6.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.544,=C:\Users\futyn\Desktop\курсовая\Unit11.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.283,C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit4.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.610,=C:\Users\futyn\Desktop\курсовая\Unit10.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.310,=C:\Users\futyn\Desktop\курсовая\Unit8.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.736,=C:\Users\futyn\Desktop\курсовая\Unit8.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.283,C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.970,=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.283,C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.199,C:\Users\futyn\Desktop\SIBSAU\курсовая\Unit4.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.781,=C:\Users\futyn\Desktop\SIBSAU\курсовая\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.120,=C:\Users\futyn\Desktop\SIBSAU\курсовая\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.586,C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\futyn\Desktop\курсовая\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.821,=C:\Users\futyn\Desktop\SIBSAU\курсовая\Unit13.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.736,=C:\Users\futyn\Desktop\курсовая\Unit8.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.310,=C:\Users\futyn\Desktop\курсовая\Unit8.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.610,=C:\Users\futyn\Desktop\курсовая\Unit10.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.957,=C:\Users\futyn\Desktop\SIBSAU\курсовая\Unit12.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.695,C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\futyn\Desktop\курсовая\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.133,C:\Users\futyn\Desktop\курсовая\Unit9.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.639,=C:\Users\futyn\Desktop\курсовая\Unit9.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.586,C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\futyn\Desktop\курсовая\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.997,=C:\Users\futyn\Desktop\курсовая\Unit5.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.538,=C:\Users\futyn\Desktop\курсовая\Unit7.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.586,C:\Users\futyn\Desktop\курсовая\Unit1.dfm=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.639,=C:\Users\futyn\Desktop\курсовая\Unit9.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.369,=C:\Users\futyn\Desktop\курсовая\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.730,=C:\Users\futyn\Desktop\курсовая\Unit3.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.716,=C:\Users\futyn\Desktop\курсовая\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.133,C:\Users\futyn\Desktop\курсовая\Unit9.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.846,=C:\Users\futyn\Desktop\курсовая\Unit6.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.544,=C:\Users\futyn\Desktop\курсовая\Unit11.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.369,=C:\Users\futyn\Desktop\курсовая\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.283,C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit4.dfm=C:\Users\futyn\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.730,=C:\Users\futyn\Desktop\курсовая\Unit3.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Unit1.pas"/>
@@ -39,5 +44,9 @@
     <File Path="Unit10.dfm"/>
     <File Path="Unit11.pas"/>
     <File Path="Unit11.dfm"/>
+    <File Path="Unit12.pas"/>
+    <File Path="Unit12.dfm"/>
+    <File Path="Unit13.pas"/>
+    <File Path="Unit13.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

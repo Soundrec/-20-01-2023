@@ -1,4 +1,4 @@
-unit Unit1;
+unit Unit4;
 
 interface
 
@@ -23,12 +23,20 @@ type
     ButtonAddBooking: TButton;
     ButtonChangeBooking: TButton;
     Panel2: TPanel;
+    Label1: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
     Label9: TLabel;
     Label10: TLabel;
+    Label2: TLabel;
     DBText4: TDBText;
     Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
     DBEdit4: TDBEdit;
     DBMemo1: TDBMemo;
     Panel3: TPanel;
@@ -64,6 +72,7 @@ type
     B_search_date_time: TButton;
     E_search_date: TEdit;
     E_search_time: TEdit;
+    Panel6: TPanel;
     GroupBox4: TGroupBox;
     GroupBox5: TGroupBox;
     RB_dush: TRadioButton;
@@ -82,12 +91,6 @@ type
     reccountEdit: TEdit;
     Label14: TLabel;
     DBMemo2: TDBMemo;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    DBEdit5: TDBEdit;
-    Edit5: TEdit;
     procedure DBGrid1TitleClick(Column: TColumn);
     procedure ButtonSetImageClick(Sender: TObject);
     procedure ButtonAddBookingClick(Sender: TObject);
@@ -120,6 +123,9 @@ type
     procedure FormShow(Sender: TObject);
     procedure CheckBox2Click(Sender: TObject);
     procedure reccountEditChange(Sender: TObject);
+//    procedure DBGrid1ColumnMoved(Sender: TObject; FromIndex, ToIndex: Integer);
+//    procedure Label5Click(Sender: TObject);
+//    procedure DBGrid1CellClick(Column: TColumn);
        { Private declarations }
   public
     { Public declarations }
@@ -367,8 +373,6 @@ procedure TMainFormAdmin.DateTimePicker2Change(Sender: TObject);
 begin
 CheckBox1Click(nil);
 end;
-
-
 
 
 procedure TMainFormAdmin.DBGrid1CellClick(Column: TColumn);

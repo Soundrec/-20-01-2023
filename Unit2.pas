@@ -124,6 +124,9 @@ type
     Q_actors: TADOQuery;
     DS_Q_actors: TDataSource;
     Q_select_actors: TADOQuery;
+    Q_add_user: TADOQuery;
+    ADOConnection2: TADOConnection;
+    Q_check_user: TADOQuery;
     procedure Q_view_booking_full_infoAfterScroll(DataSet: TDataSet);
     procedure T_bookingAfterPost(DataSet: TDataSet);
 
