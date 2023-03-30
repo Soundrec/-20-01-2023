@@ -2,8 +2,8 @@ object Form3: TForm3
   Left = 0
   Top = 0
   Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1079#1072#1087#1080#1089#1080
-  ClientHeight = 474
-  ClientWidth = 401
+  ClientHeight = 504
+  ClientWidth = 367
   Color = clBtnFace
   Font.Charset = RUSSIAN_CHARSET
   Font.Color = clWindowText
@@ -17,21 +17,27 @@ object Form3: TForm3
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 401
-    Height = 474
+    Width = 367
+    Height = 504
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 401
+    ExplicitHeight = 474
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 401
-    Height = 474
+    Width = 367
+    Height = 504
     Align = alClient
     TabOrder = 1
-    object Label8: TLabel
-      Left = 34
-      Top = 10
+    ExplicitLeft = -24
+    ExplicitTop = 8
+    ExplicitWidth = 401
+    ExplicitHeight = 474
+    object LabelDate: TLabel
+      Left = 200
+      Top = 99
       Width = 31
       Height = 17
       Caption = #1044#1072#1090#1072':'
@@ -43,57 +49,57 @@ object Form3: TForm3
       ParentFont = False
       WordWrap = True
     end
-    object Label9: TLabel
-      Left = 34
-      Top = 54
+    object LabelTime: TLabel
+      Left = 200
+      Top = 143
       Width = 41
       Height = 17
       Caption = #1042#1088#1077#1084#1103':'
       WordWrap = True
     end
-    object Label10: TLabel
-      Left = 34
-      Top = 100
+    object LabelQuest: TLabel
+      Left = 200
+      Top = 187
       Width = 36
       Height = 17
       Caption = #1050#1074#1077#1089#1090':'
     end
-    object Label5: TLabel
-      Left = 34
-      Top = 144
+    object LabelSource: TLabel
+      Left = 200
+      Top = 232
       Width = 61
       Height = 17
       Caption = #1048#1089#1090#1086#1095#1085#1080#1082':'
     end
-    object Label6: TLabel
+    object LabelStatus: TLabel
       Left = 34
-      Top = 188
+      Top = 12
       Width = 40
       Height = 17
       Caption = #1057#1090#1072#1090#1091#1089':'
     end
-    object Label7: TLabel
-      Left = 34
-      Top = 332
+    object LabelComment: TLabel
+      Left = 26
+      Top = 356
       Width = 88
       Height = 17
       Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081':'
     end
-    object Label4: TLabel
-      Left = 34
-      Top = 232
+    object LabelDiscount: TLabel
+      Left = 200
+      Top = 321
       Width = 45
       Height = 17
       Caption = #1057#1082#1080#1076#1082#1072':'
     end
-    object Label3: TLabel
-      Left = 34
-      Top = 284
+    object LabelQuantity: TLabel
+      Left = 200
+      Top = 276
       Width = 128
       Height = 17
       Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1080#1075#1088#1086#1082#1086#1074':'
     end
-    object Label2: TLabel
+    object LabelPhone: TLabel
       Left = 200
       Top = 56
       Width = 106
@@ -101,7 +107,7 @@ object Form3: TForm3
       Caption = #1053#1086#1084#1077#1088' '#1090#1077#1083#1077#1092#1086#1085#1072':'
       WordWrap = True
     end
-    object Label1: TLabel
+    object LabelName: TLabel
       Left = 200
       Top = 10
       Width = 94
@@ -115,16 +121,16 @@ object Form3: TForm3
       ParentFont = False
       WordWrap = True
     end
-    object Label11: TLabel
-      Left = 200
-      Top = 98
+    object LabelActors: TLabel
+      Left = 34
+      Top = 56
       Width = 46
       Height = 17
       Caption = #1040#1082#1090#1077#1088#1099':'
     end
     object DatePicker: TDatePicker
-      Left = 34
-      Top = 29
+      Left = 200
+      Top = 118
       Width = 145
       Height = 21
       Date = 44927.000000000000000000
@@ -137,8 +143,8 @@ object Form3: TForm3
       TabOrder = 0
     end
     object ComboBoxTime: TDBComboBox
-      Left = 34
-      Top = 73
+      Left = 200
+      Top = 162
       Width = 145
       Height = 25
       DataField = 'time'
@@ -159,8 +165,8 @@ object Form3: TForm3
       TabOrder = 1
     end
     object ButtonAdd: TButton
-      Left = 278
-      Top = 436
+      Left = 270
+      Top = 460
       Width = 75
       Height = 25
       Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
@@ -170,35 +176,35 @@ object Form3: TForm3
     object EditNamePerson: TEdit
       Left = 200
       Top = 29
-      Width = 153
+      Width = 145
       Height = 25
       TabOrder = 3
     end
     object EditPhone: TEdit
       Left = 200
       Top = 73
-      Width = 153
+      Width = 145
       Height = 25
       TabOrder = 4
     end
     object EditQuantity: TEdit
-      Left = 34
-      Top = 301
+      Left = 200
+      Top = 295
       Width = 145
       Height = 25
       TabOrder = 5
     end
     object EditDiscount: TEdit
-      Left = 34
-      Top = 251
+      Left = 200
+      Top = 340
       Width = 145
       Height = 25
       TabOrder = 6
       Text = '0'
     end
     object MemoComment: TMemo
-      Left = 34
-      Top = 355
+      Left = 26
+      Top = 379
       Width = 319
       Height = 63
       Hint = #1042#1074#1077#1076#1080#1090#1077' '#1090#1077#1082#1089#1090
@@ -207,8 +213,8 @@ object Form3: TForm3
       TabOrder = 7
     end
     object QuestBox: TDBComboBox
-      Left = 34
-      Top = 117
+      Left = 200
+      Top = 206
       Width = 145
       Height = 25
       DataField = 'nameq'
@@ -219,8 +225,8 @@ object Form3: TForm3
       TabOrder = 8
     end
     object SourceBox: TDBComboBox
-      Left = 34
-      Top = 161
+      Left = 200
+      Top = 251
       Width = 145
       Height = 25
       DataField = 'name'
@@ -234,10 +240,10 @@ object Form3: TForm3
       TabOrder = 9
     end
     object actorsEdit: TCheckListBox
-      Left = 200
-      Top = 117
+      Left = 34
+      Top = 75
       Width = 153
-      Height = 209
+      Height = 245
       ItemHeight = 17
       Items.Strings = (
         #1053#1072#1089#1090#1103' '#1042#1072#1089#1080#1083#1100#1077#1074#1072
@@ -251,8 +257,8 @@ object Form3: TForm3
     end
     object StatusBox: TComboBox
       Left = 34
-      Top = 205
-      Width = 145
+      Top = 29
+      Width = 153
       Height = 25
       ItemIndex = 1
       TabOrder = 11
