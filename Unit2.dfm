@@ -1657,7 +1657,7 @@ object DataModule2: TDataModule2
     DataSource = DS_T_users
     Parameters = <>
     SQL.Strings = (
-      'SELECT * FROM users')
+      'SELECT * FROM users ')
     Left = 560
     Top = 488
   end

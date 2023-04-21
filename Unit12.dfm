@@ -2,7 +2,7 @@ object Form12: TForm12
   Left = 0
   Top = 0
   Caption = #1056#1077#1075#1080#1089#1090#1088#1072#1094#1080#1103
-  ClientHeight = 198
+  ClientHeight = 238
   ClientWidth = 300
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -47,5 +47,15 @@ object Form12: TForm12
     Caption = #1055#1086#1076#1090#1074#1077#1088#1076#1080#1090#1100
     TabOrder = 3
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 8
+    Top = 189
+    Width = 175
+    Height = 41
+    Caption = #1040#1074#1090#1086#1088#1080#1079#1072#1094#1080#1103
+    Style = bsCommandLink
+    TabOrder = 4
+    OnClick = Button2Click
   end
 end

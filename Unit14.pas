@@ -18,6 +18,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +32,7 @@ implementation
 
 {$R *.dfm}
 
-uses Unit1, Unit13, Unit2;
+uses Unit1, Unit2, Unit13;
 
 procedure TForm14.Button1Click(Sender: TObject);
  var
@@ -74,6 +75,17 @@ begin
   DataModule2.Q_users.Close;
   DataModule2.Q_users.SQL.Text := 'SELECT * FROM users';
   DataModule2.Q_users.Open;
+end;
+
+procedure TForm14.FormShow(Sender: TObject);
+begin
+  DataModule2.Q_users.Close;
+  DataModule2.Q_users.SQL.Text := 'SELECT * FROM users WHERE username != ' + Form13.username + ' AND password != ' + Form13.passwordhash + ';';
+  DataModule2.Q_users.Open;
+//  DataModule2.Q_users.Requery;
+  DataModule2.DS_Q_users.DataSet := DataModule2.Q_users;
+  DBGrid1.Refresh;
+
 end;
 
 end.

@@ -11,6 +11,7 @@ object Form14: TForm14
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -20,10 +21,6 @@ object Form14: TForm14
     Height = 201
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 160
-    ExplicitTop = 136
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
@@ -63,7 +60,6 @@ object Form14: TForm14
       Height = 40
       Align = alBottom
       TabOrder = 1
-      ExplicitWidth = 445
       object Button1: TButton
         Left = 8
         Top = 6
