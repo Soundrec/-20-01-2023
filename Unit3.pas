@@ -13,17 +13,17 @@ type
     PageControl1: TPageControl;
     Panel1: TPanel;
     DatePicker: TDatePicker;
-    Label8: TLabel;
-    Label9: TLabel;
+    LabelDate: TLabel;
+    LabelTime: TLabel;
     ComboBoxTime: TDBComboBox;
-    Label10: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label4: TLabel;
-    Label3: TLabel;
-    Label2: TLabel;
-    Label1: TLabel;
+    LabelQuest: TLabel;
+    LabelSource: TLabel;
+    LabelStatus: TLabel;
+    LabelComment: TLabel;
+    LabelDiscount: TLabel;
+    LabelQuantity: TLabel;
+    LabelPhone: TLabel;
+    LabelName: TLabel;
     ButtonAdd: TButton;
     EditNamePerson: TEdit;
     EditPhone: TEdit;
@@ -33,7 +33,7 @@ type
     SourceBox: TDBComboBox;
     MemoComment: TMemo;
     actorsEdit: TCheckListBox;
-    Label11: TLabel;
+    LabelActors: TLabel;
     StatusBox: TComboBox;
     procedure ButtonAddClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -59,6 +59,7 @@ var
   doit: Integer;
   i: Integer;
 begin
+  begin
   DataModule2.Q_append.Close;
   doit := 0;
   Try
@@ -128,6 +129,7 @@ begin
 
     Form3.Close();
     end;
+  end;
 end;
 
 procedure TForm3.FormShow(Sender: TObject);
@@ -152,6 +154,7 @@ begin
 
 
 end;
+
 
 end.
 

@@ -6,14 +6,13 @@ object DataModule2: TDataModule2
     Connected = True
     ConnectionString = 
       'Provider=MSDASQL.1;Persist Security Info=False;User ID=root;Exte' +
-      'nded Properties="Driver=MySQL ODBC 8.0 Unicode Driver;SERVER=loc' +
-      'alhost;UID=root;DATABASE=questbase;PORT=3306;CHARSET=utf8mb4;COL' +
-      'UMN_SIZE_S32=1";Initial Catalog=questbase'
+      'nded Properties="Driver=MySQL ODBC 5.3 Unicode Driver;SERVER=loc' +
+      'alhost;UID=root;DATABASE=questbase;PORT=3306;COLUMN_SIZE_S32=1";' +
+      'Initial Catalog=questbase'
     Left = 16
     Top = 8
   end
   object T_quests_catalog: TADOTable
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     IndexFieldNames = 'IDquest'
@@ -474,6 +473,7 @@ object DataModule2: TDataModule2
     Top = 40
   end
   object grafik1: TADOQuery
+    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     Parameters = <>
@@ -542,7 +542,7 @@ object DataModule2: TDataModule2
     UserName = 'frx_Q_view_booking_full_info'
     CloseDataSource = False
     DataSet = Q_view_booking_full_info
-    BCDToCurrency = False
+    BCDToCurrency = True
     DataSetOptions = []
     Left = 424
     Top = 24
@@ -1098,13 +1098,15 @@ object DataModule2: TDataModule2
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = T_quests_catalog
-    BCDToCurrency = False
+    BCDToCurrency = True
     DataSetOptions = []
     Left = 544
     Top = 24
   end
   object Q_team: TADOQuery
+    Active = True
     Connection = ADOConnection1
+    CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
       'SELECT * '
@@ -1160,7 +1162,7 @@ object DataModule2: TDataModule2
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = Q_Dush_month
-    BCDToCurrency = False
+    BCDToCurrency = True
     DataSetOptions = []
     Left = 464
     Top = 176
@@ -1384,7 +1386,7 @@ object DataModule2: TDataModule2
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = Q_Dez_month
-    BCDToCurrency = False
+    BCDToCurrency = True
     DataSetOptions = []
     Left = 464
     Top = 224
@@ -1611,5 +1613,56 @@ object DataModule2: TDataModule2
     Parameters = <>
     Left = 648
     Top = 224
+  end
+  object Q_add_user: TADOQuery
+    Connection = ADOConnection2
+    Parameters = <>
+    Left = 592
+    Top = 352
+  end
+  object ADOConnection2: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;User ID=root;Exte' +
+      'nded Properties="Driver=MySQL ODBC 5.3 Unicode Driver;SERVER=loc' +
+      'alhost;UID=root;DATABASE=userbase;PORT=3306;COLUMN_SIZE_S32=1";I' +
+      'nitial Catalog=userbase'
+    Left = 512
+    Top = 368
+  end
+  object Q_check_user: TADOQuery
+    Connection = ADOConnection2
+    Parameters = <>
+    Left = 632
+    Top = 352
+  end
+  object T_users: TADOTable
+    Active = True
+    Connection = ADOConnection2
+    CursorType = ctStatic
+    TableName = 'users'
+    Left = 592
+    Top = 416
+  end
+  object DS_T_users: TDataSource
+    DataSet = T_users
+    Left = 648
+    Top = 416
+  end
+  object Q_users: TADOQuery
+    Active = True
+    Connection = ADOConnection2
+    CursorType = ctStatic
+    DataSource = DS_T_users
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM users ')
+    Left = 560
+    Top = 488
+  end
+  object DS_Q_users: TDataSource
+    DataSet = Q_users
+    Left = 624
+    Top = 480
   end
 end

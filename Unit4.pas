@@ -1,4 +1,4 @@
-unit Unit1;
+unit Unit4;
 
 interface
 
@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.ExtCtrls, Vcl.Menus,
   Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
-  Vcl.DBCGrids, Vcl.ExtDlgs, Vcl.Samples.Spin, Vcl.CheckLst, Unit12;
+  Vcl.DBCGrids, Vcl.ExtDlgs, Vcl.Samples.Spin, Vcl.CheckLst;
 
 type
   TMainFormAdmin = class(TForm)
@@ -23,12 +23,20 @@ type
     ButtonAddBooking: TButton;
     ButtonChangeBooking: TButton;
     Panel2: TPanel;
+    Label1: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
     Label9: TLabel;
     Label10: TLabel;
+    Label2: TLabel;
     DBText4: TDBText;
     Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
     DBEdit4: TDBEdit;
     DBMemo1: TDBMemo;
     Panel3: TPanel;
@@ -64,6 +72,7 @@ type
     B_search_date_time: TButton;
     E_search_date: TEdit;
     E_search_time: TEdit;
+    Panel6: TPanel;
     GroupBox4: TGroupBox;
     GroupBox5: TGroupBox;
     RB_dush: TRadioButton;
@@ -72,9 +81,9 @@ type
     GroupBox3: TGroupBox;
     E_actor_phone: TEdit;
     B_search_actor_phone: TButton;
-    ButtonEditActor: TButton;
-    ButtonAddActor: TButton;
-    ButtonDelActor: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
     Panel8: TPanel;
     actorscom: TCheckListBox;
     LabelRecCount: TLabel;
@@ -82,13 +91,6 @@ type
     reccountEdit: TEdit;
     Label14: TLabel;
     DBMemo2: TDBMemo;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    DBEdit5: TDBEdit;
-    Edit5: TEdit;
-    N7: TMenuItem;
     procedure DBGrid1TitleClick(Column: TColumn);
     procedure ButtonSetImageClick(Sender: TObject);
     procedure ButtonAddBookingClick(Sender: TObject);
@@ -114,15 +116,16 @@ type
     procedure B_search_date_timeClick(Sender: TObject);
     procedure DBGrid2TitleClick(Column: TColumn);
     procedure B_search_actor_phoneClick(Sender: TObject);
-    procedure ButtonEditActorClick(Sender: TObject);
-    procedure ButtonAddActorClick(Sender: TObject);
-    procedure ButtonDelActorClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
     procedure FormShow(Sender: TObject);
     procedure CheckBox2Click(Sender: TObject);
     procedure reccountEditChange(Sender: TObject);
-    procedure N7Click(Sender: TObject);
-    procedure БронированияChange(Sender: TObject);
+//    procedure DBGrid1ColumnMoved(Sender: TObject; FromIndex, ToIndex: Integer);
+//    procedure Label5Click(Sender: TObject);
+//    procedure DBGrid1CellClick(Column: TColumn);
        { Private declarations }
   public
     { Public declarations }
@@ -135,12 +138,11 @@ var
   order: bool;
   var pos:TBookmark;
 
-
 implementation
 
 {$R *.dfm}
 
-uses Unit2, Unit3, Unit5, Unit6, Unit7, Unit8, Unit10, Unit11, Unit13, Unit14;
+uses Unit2, Unit3, Unit5, Unit6, Unit7, Unit8, Unit10, Unit11;
 
 
 
@@ -158,41 +160,6 @@ DataModule2.T_quests_catalog.Post;
 DBGrid3.Enabled := True;
 end;
 
-procedure Log(Text:string);
-var
-  F : TextFile;
-  FileName : String;
-  dt:string;
-begin
-  FileName := ExtractFilePath(Application.ExeName) + 'Log.txt';
-  AssignFile(F, FileName);
-  if FileExists(FileName) then
-    Append(F)
-  else
-    Rewrite(F);
-    dt:=DateToStr(Date);
-    dt:=dt+' '+TimeToStr(Time);
-  WriteLn(F, dt, ':' , Form13.username, ':' ,Form13.access, ':' ,text);
-  CloseFile(F);
-end;
-
-procedure Log1(Text:string);
-var
-  F : TextFile;
-  FileName : String;
-  dt:string;
-begin
-  FileName := ExtractFilePath(Application.ExeName) + 'Log.txt';
-  AssignFile(F, FileName);
-  if FileExists(FileName) then
-    Append(F)
-  else
-    Rewrite(F);
-    dt:=DateToStr(Date);
-    dt:=dt+' '+TimeToStr(Time);
-  WriteLn(F, dt, ':' , Form13.username, ':' ,Form13.access, ':' ,text);
-  CloseFile(F);
-end;
 
 procedure TMainFormAdmin.ButtonDelBookingClick(Sender: TObject);
 var
@@ -218,6 +185,7 @@ DataModule2.Q_delete.Close;
 DataModule2.Q_view_booking_full_info.Requery;
 
 LabelRecCount.Caption :='Отображено записей: '+inttostr(DataModule2.Q_view_booking_full_info.RecordCount);
+
 end;
 
 procedure TMainFormAdmin.ButtonDelImageClick(Sender: TObject);
@@ -275,7 +243,7 @@ begin
 
 end;
 
-procedure TMainFormAdmin.ButtonEditActorClick(Sender: TObject);
+procedure TMainFormAdmin.Button1Click(Sender: TObject);
 var
 pos : TBookmark;
 begin
@@ -287,17 +255,15 @@ begin
   Form10.ShowModal;
   DataModule2.Q_actors.Requery();
   DataModule2.Q_actors.GotoBookmark(pos);
-  Log('Зашёл в редактор Актёров');
 end;
 
-procedure TMainFormAdmin.ButtonAddActorClick(Sender: TObject);
+procedure TMainFormAdmin.Button2Click(Sender: TObject);
 begin
   Form11.ShowModal;
   DataModule2.Q_actors.Requery();
-  Log('Зашёл в добавление Актёров');
 end;
 
-procedure TMainFormAdmin.ButtonDelActorClick(Sender: TObject);
+procedure TMainFormAdmin.Button3Click(Sender: TObject);
 begin
 
   DataModule2.Q_delete.Close;
@@ -317,8 +283,7 @@ begin
   Form3.ShowModal;
   DataModule2.Q_view_booking_full_info.Requery;
   LabelRecCount.Caption :='Отображено записей: '+inttostr(DataModule2.Q_view_booking_full_info.RecordCount);
-  Log('Зашёл в добавление Бронирования');
-  end;
+end;
 
 procedure TMainFormAdmin.ButtonChangeBookingClick(Sender: TObject);
 var
@@ -333,7 +298,7 @@ begin
   Form5.ShowModal;
   DataModule2.Q_view_booking_full_info.Requery();
   DataModule2.Q_view_booking_full_info.GotoBookmark(pos);
-  Log('Зашёл в редактор Бронирования');
+
 end;
 
 
@@ -408,8 +373,6 @@ procedure TMainFormAdmin.DateTimePicker2Change(Sender: TObject);
 begin
 CheckBox1Click(nil);
 end;
-
-
 
 
 procedure TMainFormAdmin.DBGrid1CellClick(Column: TColumn);
@@ -566,24 +529,6 @@ end;
 
 procedure TMainFormAdmin.FormShow(Sender: TObject);
 begin
-  if Form13.access = 'user' then
-  begin
-  ButtonAddBooking.Visible := false;
-  ButtonDelBooking.Visible := false;
-  ButtonSetImage.Visible := false;
-  ButtonDelImage.Visible := false;
-  ButtonAddActor.Visible := false;
-  ButtonEditActor.Visible := false;
-  ButtonDelActor.Visible := false;
-  N7.Visible := false;
-  MainFormAdmin.Caption := 'База бронирований квеста - Пользователь'
-
-  end
-  else
-  begin
-    MainFormAdmin.Caption := 'База бронирований квеста - Администратор'
-  end;
-
   DataModule2.Q_view_booking_full_info.Close;
   DataModule2.Q_view_booking_full_info.SQL.Text:= 'SELECT * FROM view_booking_full_info ORDER BY date DESC' ;
   if CheckBox2.Checked=true then
@@ -615,11 +560,6 @@ end;
 procedure TMainFormAdmin.N6Click(Sender: TObject);
 begin
 DataModule2.Rep_frx_Q_Dush_month.ShowReport();
-end;
-
-procedure TMainFormAdmin.N7Click(Sender: TObject);
-begin
-Form14.Show;
 end;
 
 procedure TMainFormAdmin.N8Click(Sender: TObject);
@@ -654,11 +594,6 @@ end;
 procedure TMainFormAdmin.SpinCostValueChange(Sender: TObject);
 begin
 ChkCostFilterClick(nil);
-end;
-
-procedure TMainFormAdmin.БронированияChange(Sender: TObject);
-begin
-  Log('Перешёл между формами');
 end;
 
 end.

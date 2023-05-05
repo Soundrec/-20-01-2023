@@ -26,7 +26,10 @@ type
 
 var
   Form10: TForm10;
-
+min_name_length:integer;
+max_name_length:integer;
+min_sname_length:integer;//фамилия
+max_sname_length:integer;
 implementation
 
 {$R *.dfm}

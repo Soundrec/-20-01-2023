@@ -37,9 +37,19 @@ uses Unit1, Unit2;
 procedure TForm11.Button1Click(Sender: TObject);
 var
 sql : string;
+min_name_length:integer;
+max_name_length:integer;
+min_sname_length:integer;//фамилия
+max_sname_length:integer;
 begin
+min_name_length:=5;
+max_name_length:=20;
+min_sname_length:=5;
+max_sname_length:=20;
  DataModule2.Q_append.Close;
  DataModule2.Q_append.SQL.Clear;
+ if (length(edit1.text) >= min_name_length) or (length(edit1.text) <= max_name_length) or (length(edit2.text)>= min_sname_length) or (length(edit2.text)<= max_sname_length) or (length(edit3.text)=11)  then
+ begin
 
  sql := 'INSERT INTO actors (name, surname, phone, games_played) VALUES('
     + QuotedStr(Edit1.Text) + ', '
@@ -50,6 +60,19 @@ begin
   DataModule2.Q_append.SQL.Text := sql;
   DataModule2.Q_append.ExecSQL;
   Form11.Close;
+ end
+ else if (length(edit1.text) < min_name_length) or (length(edit1.text) > max_name_length) then
+ begin
+ ShowMessage('Имя содержит слишком много или слишком мало символов');
+ end;
+ if (length(edit2.text)>= min_sname_length) or (length(edit2.text)<= max_sname_length) then
+ begin
+   ShowMessage('Фамилия содержит слишком много или слишком мало символов');
+ end;
+ if (length(edit3.text)<>11) then
+ begin
+   ShowMessage('Некорректный номер телефона');
+ end;
 
 end;
 
